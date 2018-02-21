@@ -3,6 +3,6 @@ module.exports = MiddlewareBase => class BodyParser extends MiddlewareBase {
     return 'Parses the request body, making `ctx.request.body` available to downstream middleware.'
   }
   middleware () {
-    return require('koa-bodyparser')()
+    return require('koa-bodyparser')({strict: false})
   }
 }
